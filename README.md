@@ -7,10 +7,10 @@
       npm install yarn -g
   4. Install Android Studio  
       SDK Platform : Android 6.0 (Marshmallow)  
-          Google APIs  
-          Android SDK Platform 23  
-          Intel x86 Atom_64 System Image  
-          Google APIs Intel x86 Atom_64 System Image  
+          - Google APIs  
+          - Android SDK Platform 23  
+          - Intel x86 Atom_64 System Image  
+          - Google APIs Intel x86 Atom_64 System Image  
       SDK Tools : Android SDK Build-Tools 23.0.1  
       Create AVD : Marshmallow API Level 23, x86_64 ABI image with a Android 6.0 (Google APIs)  
   3. Create new application  
