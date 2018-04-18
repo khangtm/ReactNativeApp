@@ -11,6 +11,7 @@ export default class Menu extends Component {
     
     constructor(props){
         super(props);
+        this.state = { user: null };
     }
 
     onSignOut() {
@@ -42,7 +43,14 @@ export default class Menu extends Component {
             username
         } = styles;
 
-
+        const { user } = this.state;
+        const logoutJSX = (
+            <View style={{ flex: 1 }}>
+                <TouchableOpacity style={btnStyle} onPress={this.gotoAuthentication.bind(this)}>
+                    <Text style={btnText}>Sign In</Text>
+                </TouchableOpacity>
+            </View>
+        );
         const loginJSX = (
             <View style={loginContainer}>
                 <Text style={username}>Username</Text>
@@ -60,29 +68,8 @@ export default class Menu extends Component {
                 <View />
             </View>
         );
-        const mainJSX = loginJSX;
+        const mainJSX = this.state.user ? loginJSX : logoutJSX;
         return (
-            // <View style={Style.container}>
-            //     <Text style={Style.welcome}>
-            //         Welcome to Menu
-            //     </Text>
-            //     <Button
-            //         title="Go to Authentication"
-            //         onPress={() => navigate('Authentication')}
-            //     />
-            //     {/* <Button
-            //         title="Go to Cart"
-            //         onPress={() => navigate('Cart')}
-            //     />
-            //     <Button
-            //         title="Go to Search"
-            //         onPress={() => navigate('Search')}
-            //     />
-            //     <Button
-            //         title="Go to Contact"
-            //         onPress={() => navigate('Contact')}
-            //     /> */}
-            // </View>
             <View style={container}>
                 <Image source={profileIcon} style={profile} />
                 {mainJSX}

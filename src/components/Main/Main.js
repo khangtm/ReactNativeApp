@@ -12,6 +12,8 @@ import Search from './Search/Search';
 import Contact from './Contact/Contact';
 import Shop from './Shop/Shop';
 import Authentication from './../Authentication/Authentication';
+import SignIn from './../Authentication/SignIn';
+import SignUp from './../Authentication/SignIn';
 import ChangeInfo from './../ChangeInfo/ChangeInfo';
 import OrderHistory from './../OrderHistory/OrderHistory';
 
@@ -63,8 +65,15 @@ const MainTab = TabNavigator({
     swipeEnabled: true,
 });
 
-const MenuStack =StackNavigator ({
+const AuthenticationStack =StackNavigator ({
   Authentication: { screen: Authentication, },
+  SignIn: { screen: SignIn, },
+  SignUp: { screen: SignUp, },
+});
+
+
+const MenuStack =StackNavigator ({
+  Authentication: { screen: AuthenticationStack, },
   ChangeInfo: { screen: ChangeInfo, },
   OrderHistory: { screen: OrderHistory, },
 });
