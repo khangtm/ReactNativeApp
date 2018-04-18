@@ -29,8 +29,6 @@
   2. react-native-vector-icons  
       yarn add react-native-vector-icons   
       or npm install react-native-vector-icons --save  
-      Error : The icons show up as a crossed out box on Android  
-      -> react-native link react-native-vector-icons  
       
 #Error list
   1. YellowBox Warnings  
