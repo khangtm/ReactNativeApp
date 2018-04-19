@@ -38,7 +38,16 @@
           
   2. The icons show up as a crossed out box on Android using react-native-vector-icons  
       react-native link react-native-vector-icons   
-      
+ 
+ #Debugging  
+ (https://facebook.github.io/react-native/docs/debugging.html)
+  1. Accessing the In-App Developer Menu  
+      iOS : use the ⌘D keyboard  
+      Android :  run command adb shell input keyevent 82  
+  2. Select "Debug JS Remotely" from the Developer Menu
+  3. Chrome Developer Tools  
+      Open a new tab at http://localhost:8081/debugger-ui  
+      Select Tools → Developer Tools from the Chrome Menu to open the Developer Tools
       
       
       
